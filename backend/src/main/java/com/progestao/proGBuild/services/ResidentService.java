@@ -16,4 +16,8 @@ public class ResidentService {
     public List<ResidentEntity> findAll(){
         return residentRepository.findAll();
     }
+
+    public ResidentEntity findById(Long id) {
+        return residentRepository.findById(id).orElse(null);
+    }
 }
