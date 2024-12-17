@@ -20,4 +20,12 @@ public class ResidentService {
     public ResidentEntity findById(Long id) {
         return residentRepository.findById(id).orElse(null);
     }
+
+    public ResidentEntity save(ResidentEntity resident) {
+        return residentRepository.save(resident);
+    }
+
+    public void delete(Long id) {
+        residentRepository.deleteById(id);
+    }
 }
